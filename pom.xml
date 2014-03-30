@@ -34,6 +34,20 @@
 				<scope>provided</scope>
 			</dependency>
 
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-jpamodelgen</artifactId>
+				<version>4.3.4.Final</version>
+				<scope>provided</scope>
+				<exclusions>
+					<exclusion>
+						<groupId>org.hibernate.javax.persistence</groupId>
+						<artifactId>hibernate-jpa-2.0-api</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+
 			<!-- Arquillian -->
 			<dependency>
 				<groupId>org.jboss.arquillian</groupId>
@@ -147,6 +161,11 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>build-helper-maven-plugin</artifactId>
 					<version>1.8</version>
+				</plugin>
+				<plugin>
+					<groupId>org.bsc.maven</groupId>
+					<artifactId>maven-processor-plugin</artifactId>
+					<version>2.0.5</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
