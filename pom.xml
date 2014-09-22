@@ -10,7 +10,9 @@
 		<java.version>1.7</java.version>
 
 		<junit.version>4.11</junit.version>
+
 		<version.arquillian_core>1.1.5.Final</version.arquillian_core>
+		<version.arquillian.persistence>1.0.0.Alpha6</version.arquillian.persistence>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -70,6 +72,13 @@
 				<version>${version.arquillian_core}</version>
 				<scope>import</scope>
 				<type>pom</type>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jboss.arquillian.extension</groupId>
+				<artifactId>arquillian-persistence-impl</artifactId>
+				<version>${version.arquillian.persistence}</version>
+				<scope>test</scope>
 			</dependency>
 
 		</dependencies>
