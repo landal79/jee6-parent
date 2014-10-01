@@ -12,7 +12,7 @@
 		<junit.version>4.11</junit.version>
 
 		<version.arquillian_core>1.1.5.Final</version.arquillian_core>
-		<version.arquillian.persistence>1.0.0.Alpha6</version.arquillian.persistence>
+		<version.arquillian.persistence>1.0.0.Alpha5</version.arquillian.persistence>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -79,6 +79,18 @@
 				<artifactId>arquillian-persistence-impl</artifactId>
 				<version>${version.arquillian.persistence}</version>
 				<scope>test</scope>
+				<exclusions>
+					<exclusion>
+						<artifactId>slf4j-jdk14</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.7.7</version>
 			</dependency>
 
 		</dependencies>
